@@ -36,21 +36,21 @@ Note that the answer must be a substring, `pwke` is a subsequence and not a subs
 Build Requirements
 ------------------
 ```
-# Build Requirements here
+You need python 3 to run this program.
 ```
 
 
 How to build
 ------------
 ```
-# instructions here
+There's no need to build, you just need python 3
 ```
 
 
 How to Run
 ----------
 ```
-# instructions here
+You run it on a UNIX based system by typing 'python3 firstCodeChallenge.py' on the terminal. It will ask you for input, you'll write your input on the terminal and press the Enter key.
 ```
 
 
