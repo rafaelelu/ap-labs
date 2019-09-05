@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* month_day function's prototype*/
 void month_day(int year, int yearday, int *pmonth, int *pday);
 
 int main(int argc, char ** argv){
@@ -17,8 +16,7 @@ int main(int argc, char ** argv){
     int year = atoi(argv[1]);
     int yearday = atoi(argv[2]);
     month_day(year, yearday, &pmonth, &pday);
-    //printf("Pmonth: %d\nPday: %d\n", pmonth, pday);
-    printf(" %d, %d\n", pmonth, pday);
+    printf(" %d, %s\n", pday, argv[1]);
     return 0;
 }
 
