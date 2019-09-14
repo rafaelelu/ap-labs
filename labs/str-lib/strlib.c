@@ -12,22 +12,14 @@ int mystrlen(char *str){
 }
 
 char *mystradd(char *origin, char *addition){
-    int lengthOfNewString;
-    int lengthOfOrigin = mystrlen(origin);
-    int lengthOfAddition = mystrlen(addition);
-    lengthOfNewString =  lengthOfOrigin + lengthOfAddition + 1;
-    char newString[lengthOfNewString];
-    int i = 0;
-    for(int j = 0; j < lengthOfOrigin; j++){
-        newString[i] = origin[j];
-        i++;
+
+    int originLen = mystrlen(origin);
+    int i;
+    for(i = 0; addition[i] != '\0'; i++){
+        origin[originLen + i] = addition[i];
     }
-    for(int k = 0; k < lengthOfAddition; k++){
-        newString[i] = addition[k];
-        i++;
-    }
-    newString[i] = '\0';
-    return newString;
+    origin[originLen + i] = '\0';
+    return origin;
 }
 
 int mystrfind(char *origin, char *substr){
