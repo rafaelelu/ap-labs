@@ -37,7 +37,7 @@ struct Hashtable
 };
 
 void analizeLog(char *logFile, char *report);
-bool isAction(char c1, char c2);
+bool isAction(char c1, char c2, char c3);
 void addToHashtable(struct Hashtable *ht, struct Package *p);
 int getHashCode(char s[]);
 bool findInHashtable(struct Hashtable *ht, char key[]);
@@ -134,7 +134,7 @@ void analizeLog(char *logFile, char *report)
 
         case FETCHING_ACTION:
             j = 0;
-            if (isAction(buf[i], buf[i + 1]))
+            if (isAction(buf[i], buf[i + 1], buf[i+2]))
             {
                 validLine = true;
                 while (buf[i] != ' ')
@@ -247,9 +247,13 @@ void analizeLog(char *logFile, char *report)
     printf("Report is generated at: [%s]\n", report);
 }
 
-bool isAction(char c1, char c2)
+bool isAction(char c1, char c2, char c3)
 {
-    if (c1 == 'i' || c1 == 'u')
+    if (c1 == 'i' && c2 == 'n' && c3 == 's')
+    {
+        return true;
+    }
+    else if (c1 == 'u')
     {
         return true;
     }
