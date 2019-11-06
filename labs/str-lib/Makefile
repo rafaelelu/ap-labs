@@ -2,7 +2,7 @@ SHELL    = /bin/bash
 CC       = gcc
 CFLAGS   = -Wall
 LDFLAGS  =
-OBJFILES = strlib.o main.o
+OBJFILES =  main.o
 TARGET   = main
 
 all: $(TARGET)

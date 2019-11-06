@@ -2,7 +2,7 @@ SHELL    = /bin/bash
 CC       = gcc
 CFLAGS   = -Wall
 LDFLAGS  =
-OBJFILES = logger.o testLogger.o
+OBJFILES = testLogger.o
 TARGET   = testLogger
 
 all: $(TARGET)

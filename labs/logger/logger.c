@@ -83,7 +83,6 @@ int panicf(const char *format, ...) {
     done = vfprintf (stdout, format, arg);
     va_end (arg);
     textcolor(RESET, GREEN, BLACK);
-    kill(getpid(), SIGQUIT);
     return done;
 
 }
